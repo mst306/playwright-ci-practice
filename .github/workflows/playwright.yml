@@ -26,10 +26,6 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test test/clock --reporter=html=playwright-report-clock
+        run: npx playwright test test/clock
 
-      - name: Upload Playwright HTML Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: playwright-clock-report
-          path: playwright-report-clock/
+      
